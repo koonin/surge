@@ -11,6 +11,4 @@ DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,stripe.com
-DOMAIN-KEYWORD,opena
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-KEYWORD,openai
