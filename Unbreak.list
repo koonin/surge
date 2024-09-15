@@ -6,8 +6,6 @@ DOMAIN,bdtj.tagtic.cn
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
-# > plex
-DOMAIN-SUFFIX,plex.tv
 # > Google
 DOMAIN-SUFFIX,blog.google // Google Blog
 DOMAIN-SUFFIX,googletraveladservices.com // Google Flights
