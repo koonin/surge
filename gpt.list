@@ -14,4 +14,6 @@ DOMAIN-SUFFIX,stripe.com
 DOMAIN-KEYWORD,openai
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN,cdn.usefathom.com
 DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
