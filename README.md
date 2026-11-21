@@ -6,22 +6,13 @@
 
 | 由谁维护 | 内容 |
 | --- | --- |
-| 本仓库 | `Privacy.list`、`Hijacking.list`、`Global.list`、`custom.list`、`gpt.list`、`pikpak.list`，以及本次新增的 `netflix.list` |
+| 本仓库 | `priority/` 中的优先域名，以及 `Privacy.list`、`Hijacking.list`、`Global.list`、`custom.list`、`gpt.list`、`pikpak.list`、`netflix.list` |
 | 上游 | Sukka 和 Loyalsoldier 的通用规则集由 Surge 直接订阅 |
 | 本机 Surge | 策略组、节点、认证参数、订阅地址和规则顺序 |
 
 ### 优先匹配的域名
 
-主配置在进程规则之前按下表顺序匹配。只有需要优先于下载进程直连的域名才放进 `priority/`。普通分流偏好仍在 `custom.list` 和 `gpt.list` 维护。
-
-| 匹配顺序 | GitHub 规则集 | 出口 |
-| --- | --- | --- |
-| 1 | `priority/before-pikpak.list` | 🌑Proxy-Smart |
-| 2 | `pikpak.list` | 🌑Download |
-| 3 | `priority/proxy.list` | 🌑Proxy-Smart |
-| 4 | `priority/ai.list` | 🌑Proxy-gpt |
-
-`lamgo.net` 单独排在 PikPak 前面，以便它的所有子域名都走智能代理。其他域名仍先匹配 PikPak，例如 `mypikpak.docker.com` 会命中 PikPak 的关键字规则。
+需要优先于进程规则的域名按出口归类，智能代理放在 `priority/proxy.list`，AI 出口放在 `priority/ai.list`。PikPak 下载规则优先于这两张表。普通域名分流继续在 `custom.list` 和 `gpt.list` 维护。
 
 ## 第一批变更
 
