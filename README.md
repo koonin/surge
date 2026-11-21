@@ -10,6 +10,19 @@
 | 上游 | Sukka 和 Loyalsoldier 的通用规则集由 Surge 直接订阅 |
 | 本机 Surge | 策略组、节点、认证参数、订阅地址和规则顺序 |
 
+### 优先匹配的域名
+
+主配置在进程规则之前按下表顺序匹配。只有需要优先于下载进程直连的域名才放进 `priority/`。普通分流偏好仍在 `custom.list` 和 `gpt.list` 维护。
+
+| 匹配顺序 | GitHub 规则集 | 出口 |
+| --- | --- | --- |
+| 1 | `priority/before-pikpak.list` | 🌑Proxy-Smart |
+| 2 | `pikpak.list` | 🌑Download |
+| 3 | `priority/proxy.list` | 🌑Proxy-Smart |
+| 4 | `priority/ai.list` | 🌑Proxy-gpt |
+
+`lamgo.net` 单独排在 PikPak 前面，以便它的所有子域名都走智能代理。其他域名仍先匹配 PikPak，例如 `mypikpak.docker.com` 会命中 PikPak 的关键字规则。
+
 ## 第一批变更
 
 **安全浏览。** 从 `Privacy.list` 移除 `safebrowsing.urlsec.qq.com` 和 `safebrowsing.googleapis.com`。两条规则此前拦截了安全检查。移除后，由后续规则决定出口。
