@@ -68,7 +68,6 @@ DOMAIN,track.tiara.kakao.com
 # > Google
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN-SUFFIX,google-analytics.com
-DOMAIN,safebrowsing.googleapis.com
 # > GozenData
 # https://www.v2ex.com/t/772523
 DOMAIN-SUFFIX,gozendata.com
@@ -87,8 +86,6 @@ DOMAIN-SUFFIX,cpatrk.net
 DOMAIN-SUFFIX,talkingdata.com
 DOMAIN-SUFFIX,talkingdata.net
 DOMAIN-SUFFIX,udrig.com
-# > Tencent
-DOMAIN,safebrowsing.urlsec.qq.com
 # > Tenjin
 DOMAIN,track.tenjin.com
 DOMAIN,track.tenjin.io
